@@ -5,18 +5,18 @@
 适用于企业员工与管理员的信息管理和操作控制
 
 
-📁 【项目结构】
+## 📁 【项目结构】
     pro002_员工及管理员后台管理系统/
     ├── frontend/
     ├── backend/ 
     ├── database/
 
-🛠️ 【技术栈说明】
+## 🛠️ 【技术栈说明】
     🖥️ 前端技术栈 # Vue3 + Element-Plus + ECharts
     🧰 后端技术栈 # SpringBoot3 + MyBatis + Maven
     📦 数据库与管理工具 # MySQL + Navicat
 
-🚀 快速启动指南
+## 🚀 快速启动指南
 
 ### 1️⃣ 前端启动（Vue3 + Vite）
     # VsCode在集成终端中打开frontend
