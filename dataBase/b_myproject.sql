@@ -11,7 +11,7 @@
  Target Server Version : 80042 (8.0.42)
  File Encoding         : 65001
 
- Date: 08/06/2025 02:48:17
+ Date: 09/06/2025 02:43:30
 */
 
 SET NAMES utf8mb4;
@@ -28,13 +28,15 @@ CREATE TABLE `admin`  (
   `role` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '角色',
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '姓名',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of admin
 -- ----------------------------
 INSERT INTO `admin` VALUES (1, 'adminppp', '654321', 'ADMIN', '管理员1号');
 INSERT INTO `admin` VALUES (2, 'adminzzz', '123456', 'ADMIN', '新增修改2号');
+INSERT INTO `admin` VALUES (3, 'adminttt', '123456', 'ADMIN', '管理员3号');
+INSERT INTO `admin` VALUES (4, 'admin444', '123456', 'ADMIN', '增加4号');
 
 -- ----------------------------
 -- Table structure for department

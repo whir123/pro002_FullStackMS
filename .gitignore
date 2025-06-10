@@ -1,0 +1,51 @@
+# =============================
+# 全局通用忽略
+# =============================
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+
+# =============================
+# Java / SpringBoot 后端忽略
+# =============================
+backend/target/
+backend/.idea/
+backend/.classpath
+backend/.project
+backend/.settings/
+backend/.mvn/
+backend/mvnw
+backend/mvnw.cmd
+backend/*.iml
+
+# 忽略环境配置
+backend/application-local.yml
+backend/application-dev.yml
+backend/application-prod.yml
+
+# =============================
+# Vue3 前端忽略
+# =============================
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.production.local
+
+# WebStorm / VS Code
+frontend/.idea/
+frontend/.vscode/
+
+# =============================
+# 数据库 SQL 脚本临时文件
+# =============================
+database/tmp/
+
+# 忽略 desktop.ini
+desktop.ini
+# 忽略 VS Code 配置
+.vscode/
