@@ -1,0 +1,62 @@
+[编辑于 2025/07/13]
+
+1.安装element-plus
+npm i element-plus
+
+2.安装icon-vue及依赖
+npm install @element-plus/icon-vue
+
+3.在 main.ts 中
+
+import * as ElementPlusIconsVue from '@element-plus/icons-vue'
+//引入icons-vue
+
+for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
+    app.component(key, component);
+}
+//一个个注册icon component组件
+
+4.相关依赖
+
+npm i sass@1.71.1 -D			安装 Sass 编译器			处理 SCSS/Sass 样式文件
+npm i unplugin-auto-import -D		自动导入 Vue/JS API		减少手动 import 语句
+npm i unplugin-element-plus -D		按需导入 Element Plus 组件		优化 UI 库体积
+npm i unplugin-vue-components -D	自动注册 Vue 组件			直接使用组件无需手动导入
+
+创建assets/index.scss：
+@forward "element-plus/theme-chalk/src/common/var.scss" with ($colors:(
+    "primary":("base": #0066bc),
+    "success":("base": #46b61f),
+    "warning":("base": #ffad00),
+    "danger":("base": #e52f2f),
+    "info":("base": #47afdc),
+));
+
+5.在vite.config.ts中添加：
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+import ElementPlus from 'unplugin-element-plus/vite'
+
+vite.config.ts中plugins中：
+//按需定制主题配置
+    ElementPlus({useSource:true}),
+    AutoImport({resolvers: [ElementPlusResolver({ importStyle:'sass'})],}),
+    Components({resolvers: [ElementPlusResolver({ importStyle:'sass'})],}),
+
+vite.config.ts中resolve下面：
+css:{
+    preprocessorOptions: {
+      scss:{
+        //自动化导入定制化样式文件进行样式覆盖
+        additionalData:`@use "@/assets/index.scss" as *;`
+      }
+    }
+  }
+
+6.【若有报错 升级 sass 和 sass-loader】
+npm install sass@latest sass-loader@latest --save-dev
+
+7.安装Echarts
+npm install echarts
+

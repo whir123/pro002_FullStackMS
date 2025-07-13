@@ -1,0 +1,10 @@
+[编辑于 2025/07/13]
+
+1.MyBatis简介
+MyBatis 是一款优秀的持久层框架（ORM 框架）
+用于简化 Java 应用与关系型数据库（如MySQL、Oracle、PostgreSQL等）的交互
+它通过 XML 或注解配置 SQL 映射，避免了传统 JDBC 的繁琐代码，同时保留了 SQL 的灵活性
+
+2.MyBatisX 插件简介
+专门为 MyBatis 框架设计，用于提升开发效率
+通过智能代码生成、导航和校验功能，简化了 MyBatis 的 XML 和 Mapper 接口开发
