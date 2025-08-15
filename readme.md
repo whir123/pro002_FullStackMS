@@ -26,6 +26,6 @@
 
 ### 2️⃣ 后端启动（SpringBoot3 + MyBatis）
     cd backend
-    # 用 IDE 直接运行 Application 主类，或用命令：
+    # 用 intelliJ IDE 直接运行 Application 主类，或用命令：
     ./mvnw spring-boot:run
 
